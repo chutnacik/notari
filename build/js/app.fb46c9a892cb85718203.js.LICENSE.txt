@@ -1,0 +1,25 @@
+/*!
+ * Bootstrap v5.3.3 (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.10
+ * (c) 2016 Josh Cope
+ * licensed under MIT
+ */
+
+/*!
+ * Validator v0.11.9 for Bootstrap 3, by @1000hz
+ * Copyright 2017 Cina Saffary
+ * Licensed under http://opensource.org/licenses/MIT
+ *
+ * https://github.com/1000hz/bootstrap-validator
+ */
+
+/*! Magnific Popup - v1.1.0 - 2016-02-20
+ * http://dimsemenov.com/plugins/magnific-popup/
+ * Copyright (c) 2016 Dmitry Semenov; */
+
+/*! jQuery v3.7.1 | (c) OpenJS Foundation and other contributors | jquery.org/license */
