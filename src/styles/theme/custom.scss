@@ -148,20 +148,17 @@ body {
 
 .reveal {
 	position: relative;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	visibility: hidden;
+	display: inline-flex; // Use standard flexbox
+	visibility: visible; // Ensure the element is visible
 	overflow: hidden;
 }
 
 .reveal img {
 	height: 100%;
 	width: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	-webkit-transform-origin: left;
-	transform-origin: left;
+	object-fit: cover; // Remove outdated -o-object-fit
+	-webkit-transform-origin: left; // Safari compatibility
+	transform-origin: left; // Standard property
 }
 
 .row {
@@ -2329,7 +2326,7 @@ header.main-header {
 }
 
 .post-pagination ul li.active a,
-.post-pagination ul li a:hover {
+	post-pagination ul li a:hover {
 	background: var(--primary-color);
 	color: var(--white-color);
 }
@@ -2413,11 +2410,11 @@ header.main-header {
 }
 
 .post-entry h1,
-.post-entry h2,
-.post-entry h3,
-.post-entry h4,
-.post-entry h5,
-.post-entry h6 {
+	post-entry h2,
+	post-entry h3,
+	post-entry h4,
+	post-entry h5,
+	post-entry h6 {
 	margin: 0 0 0.6em;
 }
 
@@ -2503,17 +2500,17 @@ header.main-header {
 }
 
 .post-entry ul ul,
-.post-entry ul ol,
-.post-entry ol ol,
-.post-entry ol ul {
+	post-entry ul ol,
+	post-entry ol ol,
+	post-entry ol ul {
 	margin-top: 20px;
 	margin-bottom: 0;
 }
 
 .post-entry ul ul li:last-child,
-.post-entry ul ol li:last-child,
-.post-entry ol ol li:last-child,
-.post-entry ol ul li:last-child {
+	post-entry ul ol li:last-child,
+	post-entry ol ol li:last-child,
+	post-entry ol ul li:last-child {
 	margin-bottom: 0;
 }
 
