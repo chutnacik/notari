@@ -10,4 +10,4 @@ import "./vendors/jquery.waypoints.min";
 import "./vendors/jquery.counterup.min";
 import "./vendors/jquery.magnific-popup.min";
 import "./vendors/function";
-import "./vendors/scrolltrigger.min";
+import "./vendors/ScrollTrigger.min";
