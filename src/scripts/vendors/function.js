@@ -20,10 +20,13 @@ gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin);
 
 (function ($) {
 	"use strict";
+	document.addEventListener("DOMContentLoaded", function () {
+		console.log("DOM loaded");
+		console.log("menu exists:", $("#menu").length);
+	});
 
 	var $window = $(window);
 	var $body = $("body");
-
 	/* Preloader Effect */
 	$window.on("load", function () {
 		$(".preloader").fadeOut(600);

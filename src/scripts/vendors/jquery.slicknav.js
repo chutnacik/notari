@@ -35,7 +35,7 @@
 		mobileMenu = "slicknav",
 		prefix = "slicknav";
 
-	Keyboard = {
+	const Keyboard = {
 		DOWN: 40,
 		ENTER: 13,
 		ESCAPE: 27,
