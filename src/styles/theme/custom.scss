@@ -939,6 +939,16 @@ header.main-header {
 	margin-left: 30px;
 }
 
+/* Skryje counter-box counter-image sekciu na mobilných zariadeniach */
+.counter-box.counter-image.wow.fadeInUp {
+  display: none;
+}
+@media (min-width: 768px) {
+  .counter-box.counter-image.wow.fadeInUp {
+    display: flex;
+  }
+}
+
 .counter-content h3 {
 	font-size: 34px;
 	font-weight: 700;
@@ -1514,7 +1524,7 @@ header.main-header {
 }
 
 .footer-title h2 {
-	font-size: 50px;
+	
 	color: var(--white-color);
 }
 
@@ -3884,7 +3894,7 @@ header.main-header {
 	}
 
 	.footer-logo img {
-		max-width: 147px;
+		max-width: 200px;
 	}
 
 	.footer-title h2 {
@@ -4089,3 +4099,30 @@ header.main-header {
 		font-size: 30px;
 	}
 }
+
+/************************************/
+/***    Custom: Footer Hours      ***/
+/************************************/
+.footer-contact p {
+  color: #fff;
+}
+
+.footer-hours ul > li {
+border-bottom: 1px solid var(--dark-divider-color);
+	padding: 0 0 10px 0;
+}
+
+.footer-hours ul > li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.footer-links ul li a {
+	color: #fff;
+  }
+
+  .footer-title p {
+	margin-top: 20px;
+	font-size: 14px;
+	color: var(--white-color);
+  }
