@@ -14,9 +14,11 @@ function generateHtmlPlugins(templateDir) {
 			const parts = item.split(".");
 			const name = parts[0];
 			const extension = parts[1];
-			if (extension === "html") {
+			if (["html", "hbs"].includes(extension)) {
 				return new HtmlWebpackPlugin({
-					filename: `${name}.html`,
+					filename: templateDir.includes("sluzby")
+						? `sluzby/${name}.html`
+						: `${name}.html`,
 					template: Path.resolve(
 						__dirname,
 						`${templateDir}/${name}.${extension}`
@@ -31,7 +33,10 @@ function generateHtmlPlugins(templateDir) {
 		.filter((item) => item); // Filter undefined items
 }
 
-const htmlPlugins = generateHtmlPlugins("../src");
+const htmlPlugins = [
+  ...generateHtmlPlugins("../src"),
+  ...generateHtmlPlugins("../src/sluzby"),
+];
 
 module.exports = {
 	entry: {
@@ -58,6 +63,7 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 				{ from: Path.resolve(__dirname, "../public"), to: "public" },
+				{ from: Path.resolve(__dirname, "../src/assets"), to: "assets" },
 			],
 		}),
 		...htmlPlugins, // Spread all dynamically generated HtmlWebpackPlugin instances
@@ -79,6 +85,15 @@ module.exports = {
 				loader: "html-loader",
 				options: {
 					minimize: false
+				}
+			},
+			{
+				test: /\.hbs$/,
+				loader: "handlebars-loader",
+				options: {
+					partialDirs: [
+						Path.resolve(__dirname, "../src/templates")
+					]
 				}
 			},
 			{
