@@ -64,6 +64,7 @@ module.exports = {
 			patterns: [
 				{ from: Path.resolve(__dirname, "../public"), to: "public" },
 				{ from: Path.resolve(__dirname, "../src/assets"), to: "assets" },
+				{ from: Path.resolve(__dirname, "../src/php"), to: "php" },
 			],
 		}),
 		...htmlPlugins, // Spread all dynamically generated HtmlWebpackPlugin instances
