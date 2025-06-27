@@ -1,27 +1,71 @@
 <?php
+
 $errorMSG = "";
 
+// FNAME
+if (empty($_POST["fname"])) {
+	$errorMSG = "First Name is required. ";
+} else {
+	$fname = $_POST["fname"];
+}
+
+// LNAME
+if (empty($_POST["lname"])) {
+	$errorMSG = "Last Name is required. ";
+} else {
+	$lname = $_POST["lname"];
+}
+
+// EMAIL
 if (empty($_POST["email"])) {
 	$errorMSG .= "Email is required. ";
 } else {
-	$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$errorMSG .= "Invalid email format. ";
-	}
+	$email = $_POST["email"];
 }
 
-$to = "chutnak.jakub@gmail.com";
-$subject = "Test cez formulár";
-$message = "Test z formulára na notari.chutnak.sk";
-$headers = "From: noreply@notari.chutnak.sk\r\n";
-$headers .= "Reply-To: " . $email;
-
-if ($errorMSG == "") {
-	if (mail($to, $subject, $message, $headers)) {
-		echo "✅ Správa úspešne odoslaná! Ozeme sa Vám čoskoro.";
-	} else {
-		echo "❌ Zlyhalo odoslanie";
-	}
+// PHONE
+if (empty($_POST["phone"])) {
+	$errorMSG .= "Phone is required. ";
 } else {
-	echo $errorMSG;
+	$phone = $_POST["phone"];
+}
+
+// MESSAGE
+if (empty($_POST["message"])) {
+	$errorMSG .= "Message is required. ";
+} else {
+	$message = $_POST["message"];
+}
+
+$subject = $_POST['subject'] . ' - Contact from site';
+
+$EmailTo = "chutnak.jakub@gmail.com"; // Replace with your email.
+
+// prepare email body text
+$Body = "";
+$Body .= "Name: ";
+$Body .= $fname . " " . $lname;
+$Body .= "\n";
+$Body .= "Email: ";
+$Body .= $email;
+$Body .= "\n";
+$Body .= "Phone: ";
+$Body .= $phone;
+$Body .= "\n";
+$Body .= "Message: ";
+$Body .= $message;
+$Body .= "\n";
+
+// send email
+$success = @mail($EmailTo, $subject, $Body, "From:" . $email);
+
+// redirect to success page
+if ($success && $errorMSG == "") {
+	echo "✅ Správa úspešne odoslaná! Ozeme sa Vám čoskoro.";
+} else {
+	if ($errorMSG == "") {
+		echo "❌ Zlyhalo odoslanie. Skúste to znova.";
+	} else {
+		echo $errorMSG;
+	}
 }
