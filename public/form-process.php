@@ -76,3 +76,4 @@ if ($success && $errorMSG == "") {
 		echo $errorMSG;
 	}
 }
+$subject = "Notársky formulár - správa z webu";
