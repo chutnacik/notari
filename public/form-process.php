@@ -37,7 +37,7 @@ if (empty($_POST["message"])) {
 	$message = $_POST["message"];
 }
 
-$subject = $_POST['subject'] . ' - Contact from site';
+$subject = "Notársky úrad – správa z kontaktného formuláru webu";
 
 $EmailTo = "chutnak.jakub@gmail.com"; // Replace with your email.
 
@@ -76,4 +76,3 @@ if ($success && $errorMSG == "") {
 		echo $errorMSG;
 	}
 }
-$subject = "Notársky formulár - správa z webu";
