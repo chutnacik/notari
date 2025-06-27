@@ -57,7 +57,14 @@ $Body .= $message;
 $Body .= "\n";
 
 // send email
-$success = @mail($EmailTo, $subject, $Body, "From:" . $email);
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	$errorMSG .= "Invalid email format. ";
+}
+
+$headers = "From: noreply@notari.chutnak.sk\r\n";
+$headers .= "Reply-To: " . $email;
+$success = @mail($EmailTo, $subject, $Body, $headers);
 
 // redirect to success page
 if ($success && $errorMSG == "") {
