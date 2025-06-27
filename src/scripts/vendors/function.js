@@ -235,7 +235,7 @@ gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin);
 
 	function formSuccess() {
 		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!");
+		submitMSG(true, "Správa úspešne odoslaná! Ozeme sa Vám čoskoro.");
 	}
 
 	function submitMSG(valid, msg) {
