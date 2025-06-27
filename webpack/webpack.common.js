@@ -66,6 +66,7 @@ module.exports = {
 				{ from: Path.resolve(__dirname, "../src/assets"), to: "assets" },
 				{ from: Path.resolve(__dirname, "../static/.htaccess"), to: ".htaccess" },
 				{ from: Path.resolve(__dirname, "../static/form-process.php"), to: "public/form-process.php" },
+				{ from: Path.resolve(__dirname, "../static/form-test.php"), to: "public/form-test.php" },
 			],
 		}),
 		...htmlPlugins, // Spread all dynamically generated HtmlWebpackPlugin instances
