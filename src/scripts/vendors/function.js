@@ -209,7 +209,7 @@ gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin);
 
 		$.ajax({
 			type: "POST",
-			url: "form-process.php",
+			url: "/public/form-process.php",
 			data:
 				"fname=" +
 				fname +
