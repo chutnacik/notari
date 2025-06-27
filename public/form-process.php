@@ -18,7 +18,7 @@ $headers .= "Reply-To: " . $email;
 
 if ($errorMSG == "") {
 	if (mail($to, $subject, $message, $headers)) {
-		echo "✅ Odoslané";
+		echo "✅ Správa úspešne odoslaná! Ozeme sa Vám čoskoro.";
 	} else {
 		echo "❌ Zlyhalo odoslanie";
 	}
