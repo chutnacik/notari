@@ -38,9 +38,10 @@
 /************************************/
 :root {
 	--primary-color: #283C61;
+	--primary-color-rgb: 40, 60, 97;
 	--secondary-color: #F2F2F2;
 	--accent-color: #D9A282;
-	--accent-soft-color: #CBE3D1;
+	--accent-soft-color: #E5E5E5;
 	--highlight-color: #A3BFD9;
 
 	--text-color: #283C61;
@@ -129,6 +130,7 @@ img {
 
 a {
 	text-decoration: none;
+	color: var(--primary-color)
 }
 
 a:hover {
@@ -893,23 +895,26 @@ header.main-header {
 	right: 0;
 	left: 0;
 	background: linear-gradient(
-		180deg,
-		transparent 52.34%,
-		var(--primary-color) 100%
-	);
-	border-radius: 40px;
+  180deg,
+  rgba(var(--primary-color-rgb), 0) 10%,
+  rgba(var(--primary-color-rgb), 0.8) 40%,
+  rgba(var(--primary-color-rgb), 0.9) 80%,
+  rgba(var(--primary-color-rgb), 1) 100%
+);
+	border-radius:20px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	z-index: 1;
+	transition: all 1.5s ease-out;
 }
 
 .service-image {
 	overflow: hidden;
-	border-radius: 40px;
+	border-radius: 20px;
 }
 
 .service-image img {
-	border-radius: 40px;
+	border-radius: 20px;
 	aspect-ratio: 1 / 1.1;
 	object-fit: cover;
 	transition: all 0.5s ease-out;
@@ -919,15 +924,43 @@ header.main-header {
 	transform: scale(1.1);
 }
 
+
+.service-item:hover::before {
+  background: linear-gradient(
+  180deg,
+  rgba(var(--primary-color-rgb), 0.9) 90%,
+  
+  rgba(var(--primary-color-rgb), 1) 100%
+);
+  opacity: 1;
+  
+}
+
 .service-content {
 	content: "";
 	position: absolute;
 	bottom: 20px;
-	right: 80px;
-	left: 80px;
+	right: 40px;
+	left: 40px;
 	z-index: 2;
 	transition: all 0.5s ease-in-out;
 }
+
+.service-content .service-excerpt {
+  /*height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-out;*/
+  font-size: 14px;
+  color: var(--white-color);
+}
+
+/*.service-item:hover .service-content .service-excerpt {
+  height: 66px; 
+  opacity: 1;
+  margin-bottom: 10px;
+}*/
+
 
 .service-content h3 {
 	font-size: 22px;
@@ -1723,13 +1756,15 @@ header.main-header {
 	display: inline-flex;
 	margin-bottom: 0;
 	justify-content: center;
-	background-color: var(--accent-color);
+	background-color: var(--accent-soft-color);
 	border-radius: 8px;
 	padding: 10px 20px;
+	font-size: 12px;
+	font-weight: 500;
 }
 
 .page-header-box ol li.breadcrumb-item {
-	color: var(--white-color);
+	color: var(--text-muted-color);
 }
 
 .page-header-box ol li.breadcrumb-item a {
@@ -1737,7 +1772,7 @@ header.main-header {
 }
 
 .page-header-box ol .breadcrumb-item + .breadcrumb-item::before {
-	color: var(--white-color);
+	color: var(--text-muted-color);
 }
 
 .page-about {
@@ -4291,3 +4326,4 @@ header.main-header {
   opacity: 0.8;
   color: var(--accent-color);
 }
+
