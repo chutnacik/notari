@@ -36,10 +36,28 @@
 /************************************/
 /*** 	 01. Global Variables	  ***/
 /************************************/
+:root {
+	--primary-color: #283C61;
+	--secondary-color: #F2F2F2;
+	--accent-color: #D9A282;
+	--accent-soft-color: #CBE3D1;
+	--highlight-color: #A3BFD9;
+
+	--text-color: #283C61;
+	--text-muted-color: #5B6671;
+
+	--divider-color: #E5E2DE;
+	--white-color: #FFFFFF;
+	--error-color: #E65757;
+
+	--default-font: "Plus Jakarta Sans", sans-serif;
+}
+
+/** Stare root
 
 :root {
-	--primary-color: #0f161b;
-	--secondary-color: #d4d6E7;
+	--primary-color: #4B3340;
+	--secondary-color: #F8F8FB;
 	--text-color: #4a5567;
 	--accent-color: #462532;
 	--divider-color: #f8f7f7;
@@ -48,6 +66,27 @@
 	--error-color: rgb(230, 87, 87);
 	--default-font: "Plus Jakarta Sans", sans-serif;
 }
+**/
+
+/** Toto je ešte ok verzia od ChatGPT
+
+:root {
+	--primary-color: #2F3A44;
+	--secondary-color: #F1EBE3;
+	--accent-color: #D9A282;
+	--accent-soft-color: #CBE3D1;
+	--highlight-color: #A3BFD9;
+
+	--text-color: #2F3A44;
+	--text-muted-color: #5B6671;
+
+	--divider-color: #E9E6E2;
+	--white-color: #FFFFFF;
+	--error-color: #E65757;
+
+	--default-font: "Plus Jakarta Sans", sans-serif;
+}
+	**/
 
 /************************************/
 /*** 	   02. General css		  ***/
@@ -248,8 +287,8 @@ body {
 
 .btn-default.btn-highlighted {
 	margin-left: 20px;
-	background-color: var(--white-color);
-	color: var(--accent-color);
+	background-color: var(--primary-color);
+	color: var(--white-color);
 }
 
 .btn-default.btn-highlighted::before {
@@ -562,7 +601,7 @@ header.main-header {
 }
 
 .slicknav_btn {
-	background: var(--accent-color);
+	background: var(--primary-color);
 	padding: 6px 0 0;
 	width: 38px;
 	height: 38px;
@@ -606,7 +645,7 @@ header.main-header {
 	position: absolute;
 	width: 100%;
 	padding: 0;
-	background: var(--accent-color);
+	background: var(--primary-color);
 }
 
 .slicknav_menu ul {
@@ -622,8 +661,8 @@ header.main-header {
 	position: relative;
 	font-size: 16px;
 	font-weight: 400;
-
-	padding: 10px 20px;
+	border-top: 1px solid #162338;
+	padding: 15px 20px;
 	color: var(--white-color);
 	line-height: normal;
 	margin: 0;
@@ -634,7 +673,7 @@ header.main-header {
 .slicknav_nav a:hover,
 .slicknav_nav .slicknav_row:hover {
 	background-color: transparent;
-	color: var(--primary-color);
+	color: var(--accent-color);
 }
 
 .slicknav_menu ul ul li a {
@@ -709,6 +748,11 @@ header.main-header {
 
 .hero-image {
 	text-align: right;
+}
+.hero-image img {
+	border-radius: 24px;
+	aspect-ratio: 1 / 0.5;
+	object-fit: cover;
 }
 
 /************************************/
@@ -1182,7 +1226,7 @@ header.main-header {
 /************************************/
 
 .cta-box {
-	background-color: var(--accent-color);
+	background-color: var(--primary-color);
 	padding: 50px 0;
 }
 
@@ -3141,7 +3185,7 @@ header.main-header {
 		max-width: 500px;
 		padding-bottom: 30px;
 		margin: 0 auto;
-		text-align: center;
+		text-align: left;
 	}
 
 	.hero-content-footer .btn-default.btn-highlighted {
@@ -3743,6 +3787,11 @@ header.main-header {
 	.hero-content-footer .btn-default.btn-highlighted {
 		margin-left: 0px;
 		margin-top: 10px;
+		display: block;
+	}
+
+	.hero-content-footer .btn-default {
+		display: block;
 	}
 
 	.about-image img {
@@ -4103,26 +4152,142 @@ header.main-header {
 /************************************/
 /***    Custom: Footer Hours      ***/
 /************************************/
-.footer-contact p {
+.footer-contact {
   color: #fff;
 }
 
-.footer-hours ul > li {
-border-bottom: 1px solid var(--dark-divider-color);
-	padding: 0 0 10px 0;
+.footer-contact .office-hours td {
+    font-size: 14px;
+}
+.office-hours {
+  font-family: var(--default-font);
+
+  margin-left: -4px; /* optické vyrovnanie so zvyškom layoutu */
 }
 
-.footer-hours ul > li:last-child {
-	border-bottom: none;
-	padding-bottom: 0;
+.office-hours h4 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
-.footer-links ul li a {
-	color: #fff;
-  }
+.office-hours table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 460px;
+}
 
-  .footer-title p {
-	margin-top: 20px;
-	font-size: 14px;
-	color: var(--white-color);
-  }
+.office-hours td {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.96rem;
+}
+
+.office-hours tr:first-child td,
+.office-hours tr:last-child td {
+  background-color: rgba(0, 0, 0, 0.04); /* jemné zvýraznenie prvého a posledného riadku */
+  border-radius: 4px;
+}
+
+.office-hours tr:first-child td {
+  padding-top: 0.5rem;
+}
+
+.office-hours tr:last-child td {
+  padding-bottom: 0.5rem;
+}
+
+.office-hours tr td:last-child {
+  text-align: right;
+  font-weight: 500;
+
+}
+
+.footer-location {
+  font-family: var(--default-font);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 420px;
+}
+
+.footer-location strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-location em {
+  font-style: normal;
+  opacity: 0.9;
+}
+
+.footer-location a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.footer-location a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+  opacity: 1;
+}
+
+.footer-downloads {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-downloads li {
+  margin: 0.2rem 0;
+}
+.footer-downloads a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: opacity .2s ease;
+}
+.footer-downloads a:hover {
+
+  opacity: 1;
+}
+.footer-downloads i {
+  opacity: .85;
+  color: var(--accent-color);
+}
+
+.footer-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contact li {
+  margin: 0.3rem 0;
+}
+
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+.footer-contact i {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  color: var(--accent-color);
+}
