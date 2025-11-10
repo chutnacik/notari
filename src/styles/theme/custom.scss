@@ -143,6 +143,12 @@ a:focus {
 	outline: 0;
 }
 
+hr {
+	border: 0;
+	border-top: 2px solid var(--divider-color);
+	margin: 40px 0;
+}
+
 html,
 body {
 	width: 100%;
@@ -2135,12 +2141,12 @@ header.main-header {
 }
 
 .service-entry h2 {
-	font-size: 50px;
+	font-size: 40px;
 	margin-bottom: 30px;
 }
 
 .service-entry h3 {
-	font-size: 40px;
+	font-size: 36px;
 	margin-bottom: 30px;
 }
 
@@ -2311,6 +2317,24 @@ header.main-header {
 	transform: translateY(-50%);
 	color: var(--accent-color);
 	transition: all 0.3s ease-out;
+}
+
+/* Variant pre download zoznam (napr. Na stiahnutie) */
+.service-catagery-list.download-list ul li a::after {
+  content: "\f019"; /* Font Awesome icon for download */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--accent-color);
+  transition: all 0.3s ease-out;
+}
+
+.service-catagery-list.download-list ul li:hover a::after {
+  color: var(--white-color);
 }
 
 .service-catagery-list ul li:hover a {
@@ -4325,5 +4349,36 @@ header.main-header {
   font-size: 0.85rem;
   opacity: 0.8;
   color: var(--accent-color);
+}
+
+.external-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  transition: color 0.2s ease;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.external-link:hover {
+
+text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+.external-link i {
+  margin-left: 5px;
+  font-size: 0.85em;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.external-link:hover i {
+  opacity: 1;
+    color: var(--accent-color);
 }
 
