@@ -216,7 +216,7 @@ body {
 	margin-left: -15px;
 }
 
-.row > * {
+.row>* {
 	padding-right: 15px;
 	padding-left: 15px;
 }
@@ -226,7 +226,7 @@ body {
 	margin-left: 0px;
 }
 
-.row.no-gutters > * {
+.row.no-gutters>* {
 	padding-right: 0px;
 	padding-left: 0px;
 }
@@ -327,7 +327,7 @@ body {
 }
 
 #magic-cursor {
-	
+
 	position: absolute;
 	width: 10px !important;
 	height: 10px !important;
@@ -515,7 +515,7 @@ header.main-header {
 	text-align: center;
 }
 
-.main-menu .nav-menu-wrapper > ul {
+.main-menu .nav-menu-wrapper>ul {
 	align-items: center;
 	display: inline-flex;
 }
@@ -533,7 +533,7 @@ header.main-header {
 	transition: all 0.3s ease-in-out;
 }
 
-.main-menu ul li.submenu > a:after {
+.main-menu ul li.submenu>a:after {
 	content: "\f107";
 	font-family: "FontAwesome";
 	font-weight: 900;
@@ -582,7 +582,7 @@ header.main-header {
 	transition: all 0.3s ease-in-out;
 }
 
-.main-menu ul li:hover > ul {
+.main-menu ul li:hover>ul {
 	visibility: visible;
 	opacity: 1;
 	transform: scaleY(1);
@@ -628,24 +628,15 @@ header.main-header {
 	transition: all 0.1s ease-in-out;
 }
 
-.navbar-toggle
-	a.slicknav_btn.slicknav_open
-	.slicknav_icon
-	span.slicknav_icon-bar:nth-child(1) {
+.navbar-toggle a.slicknav_btn.slicknav_open .slicknav_icon span.slicknav_icon-bar:nth-child(1) {
 	transform: rotate(-45deg) translate(-5px, 5px);
 }
 
-.navbar-toggle
-	a.slicknav_btn.slicknav_open
-	.slicknav_icon
-	span.slicknav_icon-bar:nth-child(2) {
+.navbar-toggle a.slicknav_btn.slicknav_open .slicknav_icon span.slicknav_icon-bar:nth-child(2) {
 	opacity: 0;
 }
 
-.navbar-toggle
-	a.slicknav_btn.slicknav_open
-	.slicknav_icon
-	span.slicknav_icon-bar:nth-child(3) {
+.navbar-toggle a.slicknav_btn.slicknav_open .slicknav_icon span.slicknav_icon-bar:nth-child(3) {
 	transform: rotate(45deg) translate(-5px, -5px);
 }
 
@@ -705,7 +696,7 @@ header.main-header {
 	transition: all 0.3s ease-out;
 }
 
-.slicknav_open > a .slicknav_arrow:after {
+.slicknav_open>a .slicknav_arrow:after {
 	transform: rotate(-180deg);
 }
 
@@ -757,6 +748,7 @@ header.main-header {
 .hero-image {
 	text-align: right;
 }
+
 .hero-image img {
 	border-radius: 24px;
 	aspect-ratio: 1 / 0.5;
@@ -900,14 +892,12 @@ header.main-header {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background: linear-gradient(
-  180deg,
-  rgba(var(--primary-color-rgb), 0) 10%,
-  rgba(var(--primary-color-rgb), 0.8) 40%,
-  rgba(var(--primary-color-rgb), 0.9) 80%,
-  rgba(var(--primary-color-rgb), 1) 100%
-);
-	border-radius:20px;
+	background: linear-gradient(180deg,
+			rgba(var(--primary-color-rgb), 0) 10%,
+			rgba(var(--primary-color-rgb), 0.8) 40%,
+			rgba(var(--primary-color-rgb), 0.9) 80%,
+			rgba(var(--primary-color-rgb), 1) 100%);
+	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	z-index: 1;
@@ -932,14 +922,12 @@ header.main-header {
 
 
 .service-item:hover::before {
-  background: linear-gradient(
-  180deg,
-  rgba(var(--primary-color-rgb), 0.9) 90%,
-  
-  rgba(var(--primary-color-rgb), 1) 100%
-);
-  opacity: 1;
-  
+	background: linear-gradient(180deg,
+			rgba(var(--primary-color-rgb), 0.9) 90%,
+
+			rgba(var(--primary-color-rgb), 1) 100%);
+	opacity: 1;
+
 }
 
 .service-content {
@@ -953,12 +941,12 @@ header.main-header {
 }
 
 .service-content .service-excerpt {
-  /*height: 0;
+	/*height: 0;
   overflow: hidden;
   opacity: 0;
   transition: all 0.4s ease-out;*/
-  font-size: 14px;
-  color: var(--white-color);
+	font-size: 14px;
+	color: var(--white-color);
 }
 
 /*.service-item:hover .service-content .service-excerpt {
@@ -1024,12 +1012,13 @@ header.main-header {
 
 /* Skryje counter-box counter-image sekciu na mobilných zariadeniach */
 .counter-box.counter-image.wow.fadeInUp {
-  display: none;
+	display: none;
 }
+
 @media (min-width: 768px) {
-  .counter-box.counter-image.wow.fadeInUp {
-    display: flex;
-  }
+	.counter-box.counter-image.wow.fadeInUp {
+		display: flex;
+	}
 }
 
 .counter-content h3 {
@@ -1372,6 +1361,48 @@ header.main-header {
 	padding: 40px 30px;
 }
 
+.pricing-item .custom-list {
+	text-align: left;
+	display: inline-block;
+	margin: 0 auto 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.pricing-item .custom-list li {
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 15px;
+	line-height: 1.4;
+	font-size: 15px;
+}
+
+.pricing-item .custom-list li:last-child {
+	margin-bottom: 0;
+}
+
+.pricing-item .custom-list li::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: var(--accent-color);
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 1;
+}
+
+.pricing-item .custom-list li a {
+	color: var(--primary-color);
+	font-weight: 600;
+	border-bottom: 1px solid var(--accent-soft-color);
+	text-decoration: none !important;
+}
+
+.pricing-item .custom-list li a:hover {
+	color: var(--accent-color);
+	border-color: var(--accent-color);
+}
+
 .pricing-header {
 	border-bottom: 1px solid var(--secondary-color);
 	margin-bottom: 30px;
@@ -1607,7 +1638,7 @@ header.main-header {
 }
 
 .footer-title h2 {
-	
+
 	color: var(--white-color);
 }
 
@@ -1777,7 +1808,7 @@ header.main-header {
 	color: inherit;
 }
 
-.page-header-box ol .breadcrumb-item + .breadcrumb-item::before {
+.page-header-box ol .breadcrumb-item+.breadcrumb-item::before {
 	color: var(--text-muted-color);
 }
 
@@ -2004,11 +2035,9 @@ header.main-header {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background: linear-gradient(
-		180deg,
-		transparent 52.34%,
-		var(--primary-color) 100%
-	);
+	background: linear-gradient(180deg,
+			transparent 52.34%,
+			var(--primary-color) 100%);
 	border-radius: 40px;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -2321,20 +2350,21 @@ header.main-header {
 
 /* Variant pre download zoznam (napr. Na stiahnutie) */
 .service-catagery-list.download-list ul li a::after {
-  content: "\f019"; /* Font Awesome icon for download */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  color: var(--accent-color);
-  transition: all 0.3s ease-out;
+	content: "\f019";
+	/* Font Awesome icon for download */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	color: var(--accent-color);
+	transition: all 0.3s ease-out;
 }
 
 .service-catagery-list.download-list ul li:hover a::after {
-  color: var(--white-color);
+	color: var(--white-color);
 }
 
 .service-catagery-list ul li:hover a {
@@ -2768,11 +2798,9 @@ header.main-header {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(
-		180deg,
-		transparent 52.34%,
-		var(--primary-color) 100%
-	);
+	background: linear-gradient(180deg,
+			transparent 52.34%,
+			var(--primary-color) 100%);
 	border-radius: 40px;
 	z-index: 1;
 }
@@ -4212,173 +4240,179 @@ header.main-header {
 /***    Custom: Footer Hours      ***/
 /************************************/
 .footer-contact {
-  color: #fff;
+	color: #fff;
 }
 
 .footer-contact .office-hours td {
-    font-size: 14px;
+	font-size: 14px;
 }
-.office-hours {
-  font-family: var(--default-font);
 
-  margin-left: -4px; /* optické vyrovnanie so zvyškom layoutu */
+.office-hours {
+	font-family: var(--default-font);
+
+	margin-left: -4px;
+	/* optické vyrovnanie so zvyškom layoutu */
 }
 
 .office-hours h4 {
-  margin: 0 0 0.6rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-color);
+	margin: 0 0 0.6rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--primary-color);
 }
 
 .office-hours table {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  max-width: 460px;
+	border-collapse: separate;
+	border-spacing: 0;
+	width: 100%;
+	max-width: 460px;
 }
 
 .office-hours td {
-  padding: 0.4rem 0.6rem;
-  font-size: 0.96rem;
+	padding: 0.4rem 0.6rem;
+	font-size: 0.96rem;
 }
 
 .office-hours tr:first-child td,
 .office-hours tr:last-child td {
-  background-color: rgba(0, 0, 0, 0.04); /* jemné zvýraznenie prvého a posledného riadku */
-  border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.04);
+	/* jemné zvýraznenie prvého a posledného riadku */
+	border-radius: 4px;
 }
 
 .office-hours tr:first-child td {
-  padding-top: 0.5rem;
+	padding-top: 0.5rem;
 }
 
 .office-hours tr:last-child td {
-  padding-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .office-hours tr td:last-child {
-  text-align: right;
-  font-weight: 500;
+	text-align: right;
+	font-weight: 500;
 
 }
 
 .footer-location {
-  font-family: var(--default-font);
-  font-size: 14px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 420px;
+	font-family: var(--default-font);
+	font-size: 14px;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.85);
+	max-width: 420px;
 }
 
 .footer-location strong {
-  color: #fff;
-  font-weight: 600;
+	color: #fff;
+	font-weight: 600;
 }
 
 .footer-location em {
-  font-style: normal;
-  opacity: 0.9;
+	font-style: normal;
+	opacity: 0.9;
 }
 
 .footer-location a {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: all 0.2s ease;
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	transition: all 0.2s ease;
 }
 
 .footer-location a:hover {
-  color: #fff;
-  border-bottom-color: #fff;
-  opacity: 1;
+	color: #fff;
+	border-bottom-color: #fff;
+	opacity: 1;
 }
 
 .footer-downloads {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
+
 .footer-downloads li {
-  margin: 0.2rem 0;
+	margin: 0.2rem 0;
 }
+
 .footer-downloads a {
-  color: rgba(255,255,255,0.9);
-  text-decoration: none;
-  font-size: 14px;
-  display: inline-flex;
-  gap: 0.5rem;
-  align-items: center;
-  transition: opacity .2s ease;
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-flex;
+	gap: 0.5rem;
+	align-items: center;
+	transition: opacity .2s ease;
 }
+
 .footer-downloads a:hover {
 
-  opacity: 1;
+	opacity: 1;
 }
+
 .footer-downloads i {
-  opacity: .85;
-  color: var(--accent-color);
+	opacity: .85;
+	color: var(--accent-color);
 }
 
 .footer-contact {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .footer-contact li {
-  margin: 0.3rem 0;
+	margin: 0.3rem 0;
 }
 
 .footer-contact a {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
-  font-size: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.2s ease;
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: all 0.2s ease;
 }
 
 .footer-contact a:hover {
-  color: var(--accent-color);
-  opacity: 1;
+	color: var(--accent-color);
+	opacity: 1;
 }
 
 .footer-contact i {
-  font-size: 0.85rem;
-  opacity: 0.8;
-  color: var(--accent-color);
+	font-size: 0.85rem;
+	opacity: 0.8;
+	color: var(--accent-color);
 }
 
 .external-link {
-  color: var(--primary-color);
-  text-decoration: underline;
-  text-decoration-color: var(--secondary-color);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 8px;
-  transition: color 0.2s ease;
-  font-weight: 500;
-  transition: all 0.2s ease;
+	color: var(--primary-color);
+	text-decoration: underline;
+	text-decoration-color: var(--secondary-color);
+	text-decoration-thickness: 3px;
+	text-underline-offset: 8px;
+	transition: color 0.2s ease;
+	font-weight: 500;
+	transition: all 0.2s ease;
 }
 
 .external-link:hover {
 
-text-decoration: underline;
-  text-decoration-color: var(--accent-color);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 8px;
+	text-decoration: underline;
+	text-decoration-color: var(--accent-color);
+	text-decoration-thickness: 3px;
+	text-underline-offset: 8px;
 }
 
 .external-link i {
-  margin-left: 5px;
-  font-size: 0.85em;
-  opacity: 0.8;
-  transition: opacity 0.2s;
+	margin-left: 5px;
+	font-size: 0.85em;
+	opacity: 0.8;
+	transition: opacity 0.2s;
 }
 
 .external-link:hover i {
-  opacity: 1;
-    color: var(--accent-color);
+	opacity: 1;
+	color: var(--accent-color);
 }
-
